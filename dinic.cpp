@@ -18,7 +18,7 @@ class dinic { // implementation for dinic's algorithm which solves maximum flow 
         P.resize(n+1);
     }
 
-    void bfs(int s) {
+    void bfs (int s) {
         queue <int> q;
         q.push(s);
         lvl[s] = 0;
@@ -34,7 +34,7 @@ class dinic { // implementation for dinic's algorithm which solves maximum flow 
         }
     }
 
-    int dfs(int u, int t, int f) {
+    int dfs (int u, int t, int f) {
         if (u == t)return f;
         for (int &i = iter[u]; i<sz(P[u]); i++) {
             auto &it = P[u][i];
@@ -47,7 +47,7 @@ class dinic { // implementation for dinic's algorithm which solves maximum flow 
         }
     }
 
-    int maximum_flow(int s, int t) { 
+    int maximum_flow (int s, int t) { 
         int ans = 0;
         while (true) {
             memset(lvl, -1, sizeof(lvl));
