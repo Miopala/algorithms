@@ -35,7 +35,7 @@ class dinic { // implementation for dinic's algorithm which solves maximum flow 
     }
 
     int dfs (int u, int t, int f) {
-        if (u == t)return f;
+        if (u == t) return f;
         for (int &i = iter[u]; i<sz(P[u]); i++) {
             auto &it = P[u][i];
             if (it.cap == 0 || lvl[it.to] != lvl[u]+1) continue;
