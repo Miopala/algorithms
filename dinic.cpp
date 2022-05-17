@@ -1,4 +1,3 @@
-
 class edge{
     public:
     int to,cap,rev; // vertex, capacity, label of corresponding edge in residual network
